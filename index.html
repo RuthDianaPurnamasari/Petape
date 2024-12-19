@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PetaPe</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        PetaPe - Aplikasi Peta Interaktif
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Tambah Lokasi</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <div id="map"></div>
+
+    <input type="hidden" id="idmarker" name="idmarker" value="">
+
+    <!-- Popup info -->
+    <div id="popupinfo" class="ol-popup">
+        <button id="popupinfo-closer" class="popup-closer">&times;</button>
+        <b id="popupinfo-title">Informasi Lokasi</b>
+        <div id="popupinfo-content">Detail informasi lokasi ditampilkan di sini.</div>
+        <div id="popupinfo-delete">
+            <input type="hidden" id="idmarker" name="idmarker" value="">
+            <button id="hapusbutton" type="button">Hapus Lokasi</button>
+        </div>
+    </div>
+
+    <!-- Popup input marker -->
+    <div id="popup" class="ol-popup">
+        <b id="popup-title">Tambah Lokasi Baru</b>
+        <a href="#" id="popup-closer" class="ol-popup-closer">&times;</a>
+        <div id="popup-content">
+            Lengkapi informasi lokasi baru.
+        </div>
+        <div id="popup-input">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="volume">Deskripsi:</label>
+            <input type="text" id="volume" name="volume" required>
+            <input type="hidden" id="long" name="long" value="">
+            <input type="hidden" id="lat" name="lat" value="">
+            <button id="insertmarkerbutton" type="button">Simpan</button>
+        </div>
+    </div>
+
+    <script src="js/croot.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
